@@ -1,0 +1,17 @@
+{
+  "author": "Adedayo Omitayo <adedayo.omitayo@flowswift.com>",
+  "name": "railway-mongoose",
+  "description": "A Railwayjs Extension, to replace jugglingdb with mongoose.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Aomitayo/railway-mongoose.git"
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
