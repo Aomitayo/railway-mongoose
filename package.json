@@ -2,7 +2,7 @@
   "author": "Adedayo Omitayo <adedayo.omitayo@flowswift.com>",
   "name": "railway-mongoose",
   "description": "A Railwayjs Extension for the mongoose ODM.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/Aomitayo/railway-mongoose.git"
