@@ -4,14 +4,22 @@ var path = require('path');
 exports.init = function(root){
 	if(!global.railway){return;}
 	var configFilePath = path.join(root, 'config', 'database.json');
+	var config;
 	try{
-		var config = JSON.parse(fs.readFileSync(configFilePath, 'utf-8'))[app.set('env')];
+		config = JSON.parse(fs.readFileSync(configFilePath, 'utf-8'))[app.set('env')];
 	}
 	catch(e){
 		console.log('Could not parse config/database.json');
-		throw e
+		throw e;
 	}
-	var mongoose = require('mongoose');
-	mongoose.connect(config.url);
-	global['mongoose'] = mongoose;
+	if(global.mongoose){
+		global.mongoose.disconnect(function(){
+			global.mongoose.connect(config.url);
+		});
+	}
+	else{
+		var mongoose = require('mongoose');
+		mongoose.connect(config.url);
+		global['mongoose'] = mongoose;
+	}
 }
